@@ -15,7 +15,7 @@ interface BlogCardProps {
 
 export default function BlogCard({ post, isDarkBackground }: BlogCardProps) {
   function newDate(date: string) {
-    throw new Error("Function not implemented.");
+    throw new Error("Function not implemented.")
   }
 
   return (

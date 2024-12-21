@@ -44,7 +44,7 @@ export interface ButtonProps
     | "ghost"
     | "link";
   size?: "default" | "sm" | "lg" | "icons";
-  asChild?: boolean;
+  
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -53,7 +53,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       className,
       variant = "default",
       size = "default",
-      asChild = false,
+
       ...props
     },
     ref
