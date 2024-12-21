@@ -1,6 +1,7 @@
 import React from "react";
 import CommentSection from "@/components/CommentsSection";
 import AuthorCard from "@/components/AuthorCard";
+import Image from "next/image";
 
 const posts = [
   {
@@ -110,7 +111,7 @@ export default async function page({ params }: { params: { id: string } }) {
       </h1>
 
       {post.image && (
-        <img
+        <Image
           src={post.image}
           alt={post.title}
           className="w-full h-auto rounded-md mt-4"

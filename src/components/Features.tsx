@@ -8,9 +8,7 @@ export default function Features() {
         <h2 className="text-center text-5xl font-bold md:text-7xl lg:text-center animate-fade-in-up transition-all duration-500 ease-in-out transform hover:tranalate-y-[-5px] hover:text-green-700 text-red-700 ">
           USMAN SHAFIQ BUSSINESS BLOG
         </h2>
-        <p className="text-center mb-4 mt-4 text-2xl text-green-700 sm:text-base md:mb-12 lg:mb-16 animate-fade-in-up delay-100">
-          {" "}
-          Thinking about starting a business this year?
+        <p className="text-center mb-4 mt-4 text-2xl text-green-700 sm:text-base md:mb-12 lg:mb-16 animate-fade-in-up delay-100">Thinking about starting a business this year?
           <br />
           Whether you're diving into full-time entrepreneurship or planning a
           side hustle,
