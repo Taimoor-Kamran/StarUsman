@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { Card, CardContent, CardTitle } from "../components/ui/Card";
-import Image from "next/image";
+
 
 interface BlogCardProps {
   post: {
