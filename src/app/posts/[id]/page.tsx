@@ -86,7 +86,7 @@ const posts = [
   },
 ];
 
-export default async function page({ params }: { params: { id: string } }) {
+export default async function page({ params } : any ) {
   const { id } = await params;
   const post = posts.find((p) => p.id === id);
 
