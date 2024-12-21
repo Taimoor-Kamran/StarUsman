@@ -105,11 +105,7 @@ export default async function page({ params }: { params: { id: string } }) {
   };
   return (
     <div className="max-w-3xl mx-auto p-5">
-      <h1 className="md:text-4xl text-3xl font-bold text-red-600 text-center">
-        {" "}
-        {post.title}
-      </h1>
-
+      <h1 className="md:text-4xl text-3xl font-bold text-red-600 text-center">{post.title}</h1>
       {post.image && (
         <Image
           src={post.image}

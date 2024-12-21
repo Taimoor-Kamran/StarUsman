@@ -2,6 +2,7 @@
 import React from "react";
 import { Card, CardContent, CardTitle } from "../components/ui/Card";
 import Image from "next/image";
+
 interface BlogCardProps {
   post: {
     id: string;
@@ -14,27 +15,26 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({ post, isDarkBackground }: BlogCardProps) {
-  function newDate(date: string) {
-    throw new Error("Function not implemented.")
-  }
-
   return (
     <Card
       className={`p-4 ${
         isDarkBackground ? "bg-slate-800 text-white" : "text-slate-800"
-      }
-    rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300`}
+      } rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300`}
     >
       <Image
         src={post.image}
         alt={post.title}
         className="w-full h-48 object-cover rounded-t-lg"
+        width={500}
+        height={200} // Specify dimensions for better layout optimization
+        priority // Optimize image loading
       />
 
-      <CardTitle className="text-xl font-normal mt-4 text-center">{post.title}</CardTitle>
-      <br />
-      <CardContent className="text-center">
-        <p>{post.description} </p>
+      <CardTitle className="text-xl font-normal mt-4 text-center">
+        {post.title}
+      </CardTitle>
+      <CardContent className="text-center mt-2">
+        <p>{post.description}</p>
       </CardContent>
       <div className="flex flex-col items-center mt-4">
         <p
@@ -46,11 +46,7 @@ export default function BlogCard({ post, isDarkBackground }: BlogCardProps) {
         </p>
         <a
           href={`/posts/${post.id}`}
-          className={`w-full px-6 text-white bg-red-700 rounded hover:bg-green-700 ${
-            isDarkBackground
-              ? "bg-black hover:bg-green-700"
-              : "bg-black hover:bg-green-700"
-          }`}
+          className="w-full px-6 py-2 text-white bg-black rounded hover:bg-green-700 transition-colors duration-300"
         >
           READ MORE
         </a>
